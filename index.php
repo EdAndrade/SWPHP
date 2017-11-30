@@ -28,4 +28,4 @@
 	// RODANDO O SISTEMA
 	$App = new \SWPHP\System\App;
 
-	$App->rodaSistema();
+	$App->runSystem();

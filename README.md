@@ -1,3 +1,3 @@
 # SWPHP
 
-Framework MVC PHP 
+Mini Framework MVC PHP 

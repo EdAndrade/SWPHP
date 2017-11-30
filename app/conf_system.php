@@ -1,6 +1,13 @@
 <?php 
 
 	/*
+	 * Aplicação Base, defina a aplicação a ser 
+	 * chamada primeiro Ex: suaempresa.com/
+	 */
+
+	define( 'BASE_APP', 'swphp' );
+
+	/*
 	 * Dedinição de Constantes para
 	 * Base de Dados
 	 */

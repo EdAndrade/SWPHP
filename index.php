@@ -13,8 +13,8 @@
 	// SYS VERSION
 	define( 'SWPHP_VERSION', '1.0.0' );
 
-	// PROJETO CONFIGURAÇÕES DO SISTEMA
-	require('app/conf_system.php');
+	// PROJETO, CONFIGURAÇÕES DO SISTEMA
+	require('app/config.php');
 
 	// AUTOLOAD DO COMPOSER
 	$fileAutoad = DIR_ROOT. 'vendor' .DS. 'autoload.php';

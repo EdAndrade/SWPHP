@@ -47,47 +47,49 @@
 
 		public function render( string $view,  string $application = BASE_APP, $header = false, $footer = false )
 		{
-			// Set Application and View
-			$this->setApplication($application);
-			$this->setView($view);
+			$viewsDir = DIR_APP . 'views' . DS;
 
-			// Take header and footer if isset
-			if($header){
-				$this->setHeader($header);
+			/**
+			 * Set data
+			 */
+
+			$this->setView($view);    $this->setHeader($header);           
+			$this->setFooter($footer); $this->setApplication($application);
+
+			/**
+			 * File dirs
+			 */
+
+			$applicationDir = $viewsDir . $this->getApplication();
+			$viewFile       = $viewsDir . $this->getApplication() . DS . $this->getView() .".phtml";
+			$headerFile		= $viewsDir . $this->getHeader() .".phtml";
+			$footerFile		= $viewsDir . $this->getFooter() .".phtml";
+
+			// Verificando a App
+			if(!file_exists($applicationDir)){
+				die("<h4> { ERRO de VIEW } <> Aplicação: ". $this->getApplication() ." -> Não instalada! </h4>");
 			}
-			if($footer){
-				$this->setFooter($footer);
+
+			// Chamando header
+			if(file_exists($headerFile)){
+				require($headerFile);
 			}
 
-			// set view dir
-			$viewDir = DIR_APP . 'views' . DS;
-
-			if( !$this->getHeader() and !$this->getFooter() ){
-
-				// Renderiza somente a view
-				require_once( $viewDir . $this->getApplication() .DS.  $this->getView() . '.phtml' );
-
-			}elseif( $this->getHeader() and $this->getFooter() ){
-
-				// Renderiza a view com o header e o footer
-				require_once( $viewDir . $this->getHeader() . '.phtml' );
-				require_once( $viewDir . $this->getApplication() .DS.  $this->getView() . '.phtml' );
-				require_once( $viewDir . $this->getFooter() . '.phtml' );
-
-			}elseif( $this->getHeader() ){
-
-				// Renderiza a view so com o header
-				require_once( $viewDir . $this->getHeader() . '.phtml' );
-				require_once( $viewDir . $this->getApplication() .DS.  $this->getView() . '.phtml' );
-
+			// Chamando a view principal
+			if(file_exists($viewFile)){
+				require($viewFile);
 			}else{
-
-				// renderiza a view so com o footer
-				require_once( $viewDir . $this->getApplication() .DS.  $this->getView() . '.phtml' );
-				require_once( $viewDir . $this->getFooter() . '.phtml' );
-
+				die("<h4> { ERRO de VIEW } <> Arquivo: ". $viewFile .".phtml -> Não encontrado! </h4>");
 			}
+
+			// Chamando footer
+			if(file_exists($footerFile)){
+				require($footerFile);
+			}
+
+
 		}
+
 		/**
 		 * Inclui views pequenas como, menus, slide, sides etc
 		 * Todos os includes devem estar na pasta include por padrao

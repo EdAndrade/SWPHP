@@ -1,3 +1,16 @@
 <?php 
 
-	// Mother Controller
+	namespace SWPHP\System;
+
+	/**
+	 * 
+	 */
+
+	class Controller
+	{
+		
+		function __construct()
+		{
+			echo "Controller mae <br>";
+		}
+	}

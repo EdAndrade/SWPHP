@@ -9,7 +9,7 @@
 	class Strings
 	{
 		
-		public static function filterString( string $string ): string
+		public static function urlStrReplace( string $string ): string
 		{
 
 			$string = trim($string);

@@ -40,14 +40,14 @@
 			 * Faz a troca od indices da url chamando a App SmartWeb
 			 */
 
-			if( file_exists( DIR_APP . 'controllers' . DS . $url[0] ) & !empty($url) ){ // Dir da Aplicacao
+			if( !empty($url) ){ // Dir da Aplicacao
 				$this->application = $url[0];
 
 				if(isset($url[1])){ // Pegando o Controller
-					$this->controller = ucfirst(Strings::filterString($url[1])) . 'Controller';
+					$this->controller = ucfirst(Strings::urlStrReplace($url[1])) . 'Controller';
 				}
 				if(isset($url[2])){ // Pegando a Action
-					$this->action     = lcfirst(Strings::filterString($url[2])) . 'Action';
+					$this->action     = lcfirst(Strings::urlStrReplace($url[2])) . 'Action';
 				}
 
 				unset( $url[0], $url[1], $url[2] );

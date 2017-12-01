@@ -105,8 +105,43 @@
 		}
 
 		/**
+		 * Arquivos JS
+		 */
+
+		public function setArquivisJs( array $files )
+		{
+			$this->filesJs = $files;
+		}
+
+		public function getArquivosJs( string $url )
+		{
+			if($this->filesJs){
+				foreach( $this->filesJs as $file ){
+					echo '<script type="text/javascript" src="'.$url.'/'.$file.'.js"></script>' . "\n\r";
+				}
+			}
+		}
+
+		/**
+		 * Arquivos CSS
+		 */
+
+		public function setArquivosCss( array $files )
+		{
+			$this->filesCss = $files;
+		}
+
+		public function getArquivosCss( string $url )
+		{
+			if($this->filesCss){
+				foreach( $this->filesCss as $file ){
+					echo '<link rel="stylesheet" type="text/css" href="'.$url.'/'.$file.'.css">' . "\n\r";
+				}
+			}
+		}
+
+		/**
 		 * Setters e getters 
-		 * Titulo da pagina
 		 */
 
 		public function setTitle( string $title ) 
@@ -119,23 +154,7 @@
 			return $this->title;
 		}
 
-		/**
-		 * Arquivos CSS
-		 */
 
-		public function setFilesCss( array $files )
-		{
-			$this->filesCss = $files;
-		}
-
-		public function getFilesCss( string $url )
-		{
-			if($this->filesCss){
-				foreach( $this->filesCss as $file ){
-					echo '<link rel="stylesheet" type="text/css" href="'.$url.'/'.$file.'.css">' . "\n\r";
-				}
-			}
-		}
 
 		/**
 		 * Descricao da pagina
@@ -149,24 +168,6 @@
 		public function getDescription(): string
 		{
 			return $this->description;
-		}
-
-		/**
-		 * Arquivos Jscript
-		 */
-
-		public function setFilesJs( array $files )
-		{
-			$this->filesJs = $files;
-		}
-
-		public function getFilesJs( string $url )
-		{
-			if($this->filesJs){
-				foreach( $this->filesJs as $file ){
-					echo '<script type="text/javascript" src="'.$url.'/'.$file.'.js"></script>' . "\n\r";
-				}
-			}
 		}
 
 		/**

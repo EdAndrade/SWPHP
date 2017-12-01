@@ -2,15 +2,24 @@
 
 	namespace SWPHP\System;
 
+	use \SWPHP\System\View;
+	
 	/**
-	 * 
+	 * Controller mae
 	 */
 
 	class Controller
 	{
+		/**
+		 * View 
+		 * @var object
+		 */
+
+		public $view;
 		
 		function __construct()
 		{
-			echo "Controller mae <br>";
+			$this->view = new View;
 		}
+
 	}

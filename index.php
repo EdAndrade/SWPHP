@@ -13,7 +13,14 @@
 	// SYS VERSION
 	define( 'SWPHP_VERSION', '1.0.0' );
 
-	// PROJETO, CONFIGURAÇÕES DO SISTEMA
+	// CONFIGURAÇÕES LOCAIS DO SISTEMA
+	$configLocalFile = DIR_ROOT . 'app' . DS . 'config_local.php';
+
+	if(file_exists($configLocalFile)){
+		require($configLocalFile);
+	}
+
+	// CONFIGURAÇÕES DO SISTEMA
 	require('app/config.php');
 
 	// AUTOLOAD DO COMPOSER

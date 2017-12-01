@@ -45,7 +45,7 @@
 		 * Renderiza as views
 		 */
 
-		public function render( string $application = 'SmartWeb', string $view, $header = false, $footer = false )
+		public function render( string $view,  string $application = BASE_APP, $header = false, $footer = false )
 		{
 			// Set Application and View
 			$this->setApplication($application);
@@ -108,7 +108,7 @@
 		 * Arquivos JS
 		 */
 
-		public function setArquivisJs( array $files )
+		public function setArquivosJs( array $files )
 		{
 			$this->filesJs = $files;
 		}

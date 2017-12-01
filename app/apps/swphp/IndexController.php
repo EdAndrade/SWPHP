@@ -23,6 +23,8 @@
 
 		public function indexAction()
 		{
-			echo "Action";
+
+			// Renderizando view
+			$this->view->render( 'index/index' );
 		}
 	}

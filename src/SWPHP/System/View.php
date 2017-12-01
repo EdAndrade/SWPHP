@@ -102,7 +102,7 @@
 			if( file_exists($fileDir) ){
 				include($fileDir);
 			}else{
-				die("Arquivo: ".$fileDir.".phtml <> Não existe!");
+				die("<h4> { ERRO de INCLUDE } Arquivo: ".$fileDir.".phtml -> Não existe! </h4>");
 			}
 		}
 

@@ -36,7 +36,7 @@
 			// CSS
 			$this->view->setArquivosCss(
 				array(
-					'swphp/base/base'
+					'swphp/base/base',
 				)
 			);
 
@@ -45,6 +45,6 @@
 			 * >>> render( view, applicacao = BASE_APP, header = false, footer = false )
 			 */
 
-			$this->view->render( 'index/index', 'swphp', 'swheader', 'swfooter' );
+			$this->view->render( 'index/index', 'swphp', 'swheader', 'swheader' );
 		}
 	}

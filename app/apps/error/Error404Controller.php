@@ -18,6 +18,6 @@
 
 		public function indexAction()
 		{
-			echo "erro4040";
+			echo "erro404";
 		}
 	}

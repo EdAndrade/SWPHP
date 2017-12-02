@@ -1,7 +1,7 @@
 <?php 
 	
 	namespace SWPHP\System\Https;
-
+ 
 	use \SWPHP\System\Tools\Strings;
 	
 	/**
@@ -36,11 +36,13 @@
 			$url = array_values(array_filter(explode( '/' , $url )));
 
 			/**
-			 * Caso o primeiro indice da url n seja uma app listada
-			 * Faz a troca od indices da url chamando a App SmartWeb
+			 * 
 			 */
 
-			if( !empty($url) ){ // Dir da Aplicacao
+			$applicationDir = DIR_APP . 'apps' . DS . $url[0];
+
+			if( file_exists($applicationDir) and !empty($url) ){ // Dir da Aplicacao
+
 				$this->application = $url[0];
 
 				if(isset($url[1])){ // Pegando o Controller

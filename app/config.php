@@ -11,11 +11,21 @@
 	 * Definições de URLs do sistema
 	 */
 
+	# Caso o arquivo de configuracao local n exista
+
 	if(!isset($DOMAIN)){
 		$DOMAIN = "/swphp";
 	}
 
+	# URL base
+
 	define( 'URL', $DOMAIN );
+
+	# Arquivos Publicos 
+
+	define( 'URL_PUBLIC', URL        . '/public' );
+	define(    'URL_CSS', URL_PUBLIC . '/css'    );
+	define(     'URL_JS', URL_PUBLIC . '/js'     );
 
 	/**
 	 * Dedinição de Constantes para

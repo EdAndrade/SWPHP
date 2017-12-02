@@ -1,2 +1,30 @@
-$color_swphp_1: #fff;
-$color_swphp_2: #000;
+$color_swphp_1: rgb(44,11,59)
+$color_swphp_2: rgb(12,5,30)
+
+// Reset
+*
+	margin: 0
+	padding: 0
+	font-family: 'Roboto', sans-serif
+	font-size: 100%
+	font-weight: 300
+	box-sizing: border-box
+	color: #fff
+
+#swphp
+	position: fixed
+	top: 0 
+	left: 0
+	width: 100%
+	height: 100%
+	display: flex
+	justify-content: center 
+	align-items: center
+	background: radial-gradient( $color_swphp_1, $color_swphp_1,  $color_swphp_2 )
+a 
+	text-decoration: none
+
+// Fonts 
+@font-face
+	font-family: "Hobo"
+	src: url("../../fonts/HoboStd.otf")

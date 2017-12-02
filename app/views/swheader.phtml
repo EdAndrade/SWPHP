@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<!-- Codificação caracteres da página --> 
+		<meta charset="UTF-8"> 
+		<!-- SEO Geral --> 
+		<title><?php echo $this->getTitulo(); ?></title> 
+		<meta name="author" content="Smart Technology .Ao">
+		<!-- <meta name=viewport content="width=device-width, initial-scale=1"> -->
+		<meta name="description" content="<?php echo $this->getDescricao(); ?>"> 
+		<link rel="canonical" href="Link único da página"> 
+		<meta name="robots" content="index"> 
+		<link rel="icon" href="<?php echo URL_IMG; ?>/SmartWeb/icons/faveicon.png"/><!--FAVEICON DO SITE -->
+		<!-- Google+ / Schema.org --> 
+		<meta itemprop="name" content="Título da página"> 
+		<meta itemprop="description" content="Descrição da página em menos de 200 caracteres."> 
+		<meta itemprop="image" content="https://exemplo.com/imagem.png"> 
+		<link href="https://plus.google.com/+SuaPagina" rel="publisher"> 
+		<!-- SmartWeb SharedLink-->
+		<meta name="sw:domain" content="suaempresa.com" />
+		<meta name="sw:title" content="Título da página" />
+		<meta name="sw:description" content="Descrição da página em menos de 200 caracteres." />
+		<meta name="sw:image" content="https://exemplo.com/imagem.png" />
+		<meta name="sw:author" content="autor da pagina" />
+		<!-- Open Graph Facebook --> 
+		<meta property="og:title" content="Título da página"> 
+		<meta property="og:description" content="Descrição da página em menos de 200 caracteres."/> 
+		<meta property="og:url" content="Link da página"> 
+		<meta property="og:site_name" content="Nome do site"/> 
+		<meta property="og:type" content="website"> 
+		<meta property="og:image" content="https://exemplo.com/imagem.png"> 
+		<!-- Twitter --> 
+		<meta name="twitter:title" content="Título da página"> 
+		<meta name="twitter:description" content="Descrição da página em menos de 200 caracteres."> 
+		<meta name="twitter:url" content="Link da página"> 
+		<meta name="twitter:card" content="summary"> 
+		<meta name="twitter:image" content="https://exemplo.com/imagem.png"> 
+	    <meta name="twitter:creator" content="@estevanmaito"> 
+		<meta name="twitter:site" content="SmartWeb"> 
+		<!-- Fontes --> 
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+		<!-- Arquivos CSS --> 
+		<?php 
+			# Autoload files Css
+			$this->getArquivosCss(URL_CSS);
+		?>
+		<!-- Arquivos JS --> 
+		<?php 
+		    # Autoload files Jscript
+			$this->getArquivosJs(URL_JS);
+		?>
+	</head>
+	<body>

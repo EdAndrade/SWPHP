@@ -146,12 +146,12 @@
 		 * Setters e getters 
 		 */
 
-		public function setTitle( string $title ) 
+		public function setTitulo( string $title ) 
 		{
 			$this->title = $title;
 		}
 
-		public function getTitle(): string
+		public function getTitulo(): string
 		{
 			return $this->title;
 		}
@@ -162,12 +162,12 @@
 		 * Descricao da pagina
 		 */
 
-		public function setDescription( string $description )
+		public function setDescricao( string $description )
 		{
 			$this->description = $description;
 		}
 
-		public function getDescription(): string
+		public function getDescricao(): string
 		{
 			return $this->description;
 		}
